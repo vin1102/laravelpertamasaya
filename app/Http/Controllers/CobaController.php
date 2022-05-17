@@ -18,12 +18,8 @@ class CobaController extends Controller
     public function urutan ($ke){
 
 
-        $numbers = [
-            ['ke' => $ke, 'nomer' => 20],
-            ['ke' => $ke, 'nomer' => 30],
-            ['ke' => $ke, 'nomer' => 40],
-        ];
-        return view ('urutan', compact('numbers')); 
+        $friends = friends::all();
+        return view ('friend', compact('friends')); 
     }
     
 }
